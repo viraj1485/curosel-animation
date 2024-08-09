@@ -13,6 +13,7 @@ pluginManagement {
         jcenter()
         maven { url = uri("https://jitpack.io") }
 
+
         gradlePluginPortal()
     }
 }
