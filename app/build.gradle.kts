@@ -58,7 +58,7 @@ dependencies {
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
-    implementation ("androidx.compose.material3:material3:1.1.0")
+    implementation ("androidx.compose.material3:material3:1.2.1")
     implementation(libs.androidx.ui.util.android)
     implementation(project(":carousel-animation"))
     testImplementation(libs.junit)

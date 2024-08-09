@@ -46,7 +46,7 @@ android {
 dependencies {
 
     implementation(libs.androidx.ui)
-    implementation ("androidx.compose.material3:material3:1.1.0")
+    implementation ("androidx.compose.material3:material3:1.2.1")
     implementation(libs.androidx.junit.ktx)
     implementation ("androidx.compose.foundation:foundation:1.4.3")
     implementation(libs.androidx.ui.util.android)

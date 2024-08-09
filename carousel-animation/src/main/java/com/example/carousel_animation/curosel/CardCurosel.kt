@@ -24,13 +24,14 @@ fun <T> HorizontalCarousel(
     paddingValues: PaddingValues = PaddingValues(85.dp),
     content: @Composable (position: Int, item: T) -> Unit
 ) {
-    val pagerState = rememberPagerState(initialPage = initialPage)
+    val pagerState = rememberPagerState(initialPage = initialPage){
+        items.size
+    }
     HorizontalPager(
         state = pagerState,
         modifier = modifier,
         contentPadding = paddingValues,
         pageSpacing = pageSpacing,
-        pageCount = items.size
     ) { page ->
         Card(modifier = Modifier
             .fillMaxWidth()
