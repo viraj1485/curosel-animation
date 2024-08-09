@@ -24,18 +24,18 @@ fun <T> HorizontalCarousel(
     paddingValues: PaddingValues = PaddingValues(85.dp),
     content: @Composable (position: Int, item: T) -> Unit
 ) {
-    val pagerState = rememberPagerState(initialPage = initialPage) {
-        items.size
-    }
+    val pagerState = rememberPagerState(initialPage = initialPage)
     HorizontalPager(
         state = pagerState,
         modifier = modifier,
         contentPadding = paddingValues,
-        pageSpacing = pageSpacing
+        pageSpacing = pageSpacing,
+        pageCount = items.size
     ) { page ->
         Card(modifier = Modifier
             .fillMaxWidth()
             .graphicsLayer {
+
                 val pageOffset =
                     ((pagerState.currentPage - page) + pagerState.currentPageOffsetFraction).absoluteValue
                 val alphaLerp = lerp(

@@ -46,8 +46,10 @@ android {
 dependencies {
 
     implementation(libs.androidx.ui)
-    implementation(libs.androidx.material3)
-    implementation(libs.androidx.material3.android)
+    implementation ("androidx.compose.material3:material3:1.1.0")
+    implementation(libs.androidx.junit.ktx)
+    implementation ("androidx.compose.foundation:foundation:1.4.3")
+    implementation(libs.androidx.ui.util.android)
 }
 
 
@@ -70,7 +72,7 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 from(components["release"])
                 groupId = "com.github.viraj1485"
-                artifactId = "curousel-animation-compose"
+                artifactId = "carousel-animation-compose"
                 version = "1.0"
             }
         }
